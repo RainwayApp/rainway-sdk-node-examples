@@ -2,6 +2,7 @@ import rainway, {
   RainwayInputLevel,
   RainwayLogLevel,
   RainwayPeerState,
+  RainwayResolutionStrategy,
   RainwayStreamType,
 } from "@rainway/native";
 
@@ -44,6 +45,9 @@ rainway.addEventListener("log", (ev) => {
         type: RainwayStreamType.FullDesktop,
         permissions: RainwayInputLevel.Mouse | RainwayInputLevel.Keyboard,
         processIds: [],
+        resolutionStrategy: RainwayResolutionStrategy.LeaveUnchanged,
+        constantDisplayHeight: 0,
+        constantDisplayWidth: 0,
       });
 
       console.log(
